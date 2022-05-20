@@ -14,6 +14,7 @@ Command pattern
 ------------------------------------
 kubectl [command] [type] [name] [flags]
 kubectl get pod app -o yaml
+kubectl get secret default-token-45bk8 -o yaml
 
 imperative Approach
 ------------------------------------

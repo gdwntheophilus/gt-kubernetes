@@ -1,0 +1,1 @@
+we need certificate to login to kubernetes
