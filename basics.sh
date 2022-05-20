@@ -10,6 +10,26 @@ docker pods run on the worker nodes
 so what is running on the master nodes?
 runs several process to run and manage the worker nodes
 
+Command pattern
+------------------------------------
+kubectl [command] [type] [name] [flags]
+kubectl get pod app -o yaml
+
+imperative Approach
+------------------------------------
+kubectl run frontendpod --image=nginx --restart=Never --port=80
+
+declarative Approach
+------------------------------------
+kubectl create -f frontendpod.yaml
+
+hybrid Approach
+------------------------------------
+kubectl run frontendpod --image=nginx --restart=Never --port=80 \
+-o yaml --dry-run=client > pod.yaml
+kubectl create -f frontendpod.yaml
+
+
 Control plane
 ------------------------------------
 1. API server ( it is a container, it is an entry point of a kubernetes cluster ) the UI / API and CLI 

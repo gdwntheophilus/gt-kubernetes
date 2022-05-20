@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    app: gt-hello-world
+    env: prod
+  name: gt-hello-world
+spec:
+  containers:
+  - env:
+    - name: SPRING_PROFILES_ACTIVE
+      value: prod
+    image: gdwntheophilus/gt-hello-world:1.0.0
+    name: gt-hello-world
+    ports:
+    - containerPort: 8080
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
