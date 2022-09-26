@@ -1,0 +1,5 @@
+﻿kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml
+wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.0/aio/deploy/recommended.yaml
+k apply -f recommended.yaml
+k proxy
+kubectl describe secret -n kube-system | grep deployment -A 12
